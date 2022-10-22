@@ -19,7 +19,10 @@ function userExists(email){
 
 const SignUp=async(req,res)=>{
     const {name,email,phone,password}=req.body
+    if(!(name) || !(email) || !(phone) || !(password)){
+        return res.status(501).json({status:'failed',reason:'please provide all required data'})
 
+    }
     //validate email or reva id
     if((validator.isEmail(email) || (email.includes("@reva.edu.in")))){}
     else{//405- method not allowed
