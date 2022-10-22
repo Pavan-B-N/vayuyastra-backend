@@ -1,0 +1,23 @@
+{
+  "name": "vayuyastra-backend",
+  "version": "1.0.0",
+  "description": "This application provides backend support for vayuyastra",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Pavan B N",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.6",
+    "validator": "^13.7.0"
+  }
+}
