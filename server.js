@@ -2,7 +2,7 @@ const express=require("express")
 const app=express()
 const dotenv=require("dotenv")
 dotenv.config()
-const port=3030 || process.env.PORT
+const port= process.env.PORT || 3030
 
 //mongodb
 const connection=require("./models/mongodb")
