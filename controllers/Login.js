@@ -23,6 +23,7 @@ async function Login(req, res) {
 
     const accessToken = GenerateJsonWebToken(user.email)
     const creditionals={
+        _id:user._id,
         name:user.name,
         email:user.email,
         profilePicture:user.profilePicture,

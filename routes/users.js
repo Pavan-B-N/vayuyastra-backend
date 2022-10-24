@@ -1,7 +1,9 @@
 const { VerifyJWT } = require("../controllers/VerifyJWT")
 const router = require("express").Router()
 const { SignupModel } = require("../models/signupModel")
-router.get("/", VerifyJWT, async (req, res) => {
+router.get("/", async (req, res) => {
+
+
     var criteria;
     const { userId,email,phone } = req.query
     criteria=userId
@@ -22,7 +24,7 @@ router.get("/", VerifyJWT, async (req, res) => {
     query=null
    }
     try {
-        const data = await SignupModel.find(query, { password: 0, accountStatus: 0 })
+        const data = await SignupModel.find(query, { password: 0, accountStatus: 0 ,_id:1})
         if (!data) {
             return res.status(404).json({ status: "failure", reason: "No record found" })
         } else {
